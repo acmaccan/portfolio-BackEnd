@@ -21,11 +21,6 @@ public class UserService implements IUser {
     public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
-    
-//    @Override
-//    public User getUserByCredentials(User user) {
-//        return userRepository.findBy(user);
-//    }
 
     @Override
     public void saveUser(User user) {

@@ -19,4 +19,7 @@ _Fecha de entrega:_ 31 de agosto de 2022.
 - Practices
 
 ## Java Spring Boot
+- Install dependencies
 - Create API
+- CORS
+- application.properties environment variables
