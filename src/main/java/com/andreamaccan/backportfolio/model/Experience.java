@@ -26,14 +26,14 @@ public class Experience implements Serializable {
     String details;
     String from_date;
     String to_date;
-    int user_id;
     int type_id;
+    int user_id;
     
     public Experience() {
 
     }
 
-    public Experience(Long id, String thumb, String company, String title, String details, String from_date, String to_date, int user_id, int type_id) {
+    public Experience(Long id, String thumb, String company, String title, String details, String from_date, String to_date, int type_id, int user_id) {
         this.id = id;
         this.thumb = thumb;
         this.company = company;
@@ -41,7 +41,7 @@ public class Experience implements Serializable {
         this.details = details;
         this.from_date = from_date;
         this.to_date = to_date;
-        this.user_id = user_id;
         this.type_id = type_id;
+        this.user_id = user_id;
     }
 }

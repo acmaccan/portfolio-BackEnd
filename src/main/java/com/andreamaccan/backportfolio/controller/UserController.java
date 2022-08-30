@@ -1,13 +1,12 @@
 package com.andreamaccan.backportfolio.controller;
 
 import com.andreamaccan.backportfolio.model.User;
-import com.andreamaccan.backportfolio.service.IUser;
+import com.andreamaccan.backportfolio.service.UserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
     @Autowired
-    private IUser userService;
+    private UserService userService;
 
     @GetMapping("/user/get")
     @ResponseBody
@@ -30,12 +29,7 @@ public class UserController {
     public User getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
     }
-    
-    @PostMapping("/user/save")
-    public void saveUser(@RequestBody User user) {
-        userService.saveUser(user);
-    }
-    
+
     @PutMapping("/user/edit")
     public void editUser(@RequestBody User user) {
         userService.editUser(user);

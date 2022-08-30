@@ -36,8 +36,8 @@ public class SkillController {
         skillService.saveSkill(skill);
     }
     
-    @PutMapping("/skill/edit")
-    public void editSkill(@RequestBody Skill skill) {
+    @PutMapping("/skill/edit/{id}")
+    public void editSkill(@PathVariable Long id, @RequestBody Skill skill) {
         skillService.editSkill(skill);
     }
 

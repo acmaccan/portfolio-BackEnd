@@ -36,8 +36,8 @@ public class ProjectController {
         projectService.saveProject(project);
     }
     
-    @PutMapping("/project/edit")
-    public void editProject(@RequestBody Project project) {
+    @PutMapping("/project/edit/{id}")
+    public void editProject(@PathVariable Long id, @RequestBody Project project) {
         projectService.editProject(project);
     }
 

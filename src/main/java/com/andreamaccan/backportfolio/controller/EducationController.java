@@ -36,8 +36,8 @@ public class EducationController {
         educationService.saveEducation(education);
     }
     
-    @PutMapping("/education/edit")
-    public void editEducation(@RequestBody Education education) {
+    @PutMapping("/education/edit/{id}")
+    public void editEducation(@PathVariable Long id, @RequestBody Education education) {
         educationService.editEducation(education);
     }
 

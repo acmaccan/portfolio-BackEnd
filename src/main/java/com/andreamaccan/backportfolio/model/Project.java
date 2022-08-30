@@ -34,9 +34,9 @@ public class Project implements Serializable {
         this.id = id;
         this.image = image;
         this.title = title;
-        this.project_year = project_year;
         this.details = details;
         this.link = link;
+        this.project_year = project_year;
         this.user_id = user_id;
     }
 }

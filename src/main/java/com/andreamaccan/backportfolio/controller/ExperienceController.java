@@ -36,8 +36,8 @@ public class ExperienceController {
         experienceService.saveExperience(experience);
     }
     
-    @PutMapping("/experience/edit")
-    public void editExperience(@RequestBody Experience experience) {
+    @PutMapping("/experience/edit/{id}")
+    public void editExperience(@PathVariable Long id, @RequestBody Experience experience) {
         experienceService.editExperience(experience);
     }
 
