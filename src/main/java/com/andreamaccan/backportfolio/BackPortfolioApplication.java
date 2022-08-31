@@ -20,8 +20,8 @@ public class BackPortfolioApplication {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        // .allowedOrigins("https://portfolio-frontend-32644.web.app", "https://portfolio-frontend-32644.firebaseapp.com")
-                        .allowedOrigins("*")
+                        .allowedOrigins("https://portfolio-frontend-32644.web.app", "https://portfolio-frontend-32644.firebaseapp.com")
+                        // .allowedOrigins("*")
                         .allowedMethods("*")
                         .allowedHeaders("*");
             }
